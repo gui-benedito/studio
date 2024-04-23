@@ -1,0 +1,71 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+    <style>
+      footer {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+      }
+    </style>
+    <!-- formulário -->
+    <h2>Cadastro</h2>  
+    <form>
+        <div class="row">
+            <div class="col">
+              <label for="inputName" class="form-label">Nome:</label>
+              <input type="text" class="form-control" id="inputName" placeholder="nome" aria-label="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <label for="inputNumero" class="form-label">Número:</label>
+              <input type="number" class="form-control" id="inputNumero" placeholder="número" aria-label="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <label for="exampleFormControlInput1" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="atividades row">
+            <p>Atividade de interesse:</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="musculacao" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Musculação
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="pilates" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                  Pilates
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="funcional" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                  Funcional
+                </label>
+            </div>
+        </div>
+        <a href="#"><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Enviar
+        </button></a>
+      </form>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Agradecemos seu interesse no Harmonia Fitness e esperamos vê-lo em breve para começar sua jornada de saúde e bem-estar conosco!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}

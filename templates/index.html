@@ -1,0 +1,36 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+      <!-- boas vindas -->
+      <div>
+        <h1>Transforme Sua Vida com Saúde e Movimento</h1>
+        <p>No Harmonia Fitness, acreditamos que a verdadeira saúde vem do equilíbrio entre corpo, mente e espírito. Aqui, você encontra uma comunidade acolhedora e uma equipe de profissionais dedicados prontos para ajudá-lo a alcançar seus objetivos de saúde e bem-estar.</p>
+      </div>
+      <!-- carrossel -->
+      <div class="main-carrossel">
+        <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../static/img/pilates.webp" class="d-block w-100" alt="sala de pilates">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/musculacao.webp" class="d-block w-100" alt="sala de musculação">
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/funcional.webp" class="d-block w-100" alt="sala de funcional">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- texto corrido -->
+      <h5>Venha nos Visitar!</h5>
+      <p>Localizados no coração da cidade, o Harmonia Fitness é de fácil acesso e oferece um espaço ideal para quem busca melhorar a qualidade de vida. Estamos abertos de segunda a sábado, prontos para recebê-lo no horário que melhor lhe convier</p>
+    {% endblock %}
