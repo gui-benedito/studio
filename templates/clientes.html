@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Clientes{% endblock %}
+
+{% block conteudo %}
+<style>
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+    @media (max-width: 620px) {
+        footer {
+            display: none;
+        }
+    }
+</style>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Número</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Atividades</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente['name'] }}</td>
+                <td>{{ cliente['numero'] }}</td>
+                <td>{{ cliente['email'] }}</td>
+                <td>{{ cliente['atividades'] }}</td>
+                <td>
+                    <form action="{{ url_for('delete_cliente', id=cliente['id']) }}" method="post">
+                        <button type="submit" class="btn-excluir">X</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
