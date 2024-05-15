@@ -57,6 +57,14 @@ header {
     font-size: 14px;
 }
 
+tr:hover {
+    background-color: #f0efef;
+}
+
+thead > tr:hover {
+    background-color: transparent;
+}
+
 .row {
     margin-bottom: 1em;
 }
